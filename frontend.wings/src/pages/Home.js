@@ -27,7 +27,7 @@ export const Home = () => {
               Let's help you find your next stop.
             </p>
             <div className="bottom-text-wrapper">
-              <p className="bottom-text">
+              <p className="bottom-text typewriter">
                 Need a bathroom or a product station?
               </p>
             </div>
