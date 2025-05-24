@@ -1,87 +1,51 @@
 import React, { useState } from "react";
-import park from '../images/aldrich-park.jpg';
-import '../styles/Login.css';
+import park from "../images/aldrich-park.jpg";
+import "../styles/Login.css";
 
 const Login = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Login attempt:', { username, password });
-    // Add your login logic here
+    console.log("Logging in with:", { username, password });
+    // Add your login logic here (API call, validation, etc.)
   };
 
   return (
     <div className="logInPage">
-      <div className="image8"></div>
-      <img className="image6Icon" src={park} alt="" />
+      <div className="image8" />
+      <img className="image6Icon" src={park} alt="Aldrich Park" />
+      <div className="gameIconsangelOutfit" />
+      <div className="wings"><span className="wings1">Wings</span></div>
+      <div className="everyAngelNeedsContainer">Every angel needs their wings</div>
+      <div className="lineMdheartTwotoneIcon" />
+      <div className="vectorIcon" />
+      <div className="loginsignUp">Log In or Sign Up</div>
 
-      <div className="rectangleParent">
-        <div className="groupChild"></div>
-        <button className="login" type="submit" onClick={handleSubmit}>Login</button>
-      </div>
+      <form onSubmit={handleSubmit} className="formContainer">
+        <label className="formLabel">Username</label>
+        <input
+          type="text"
+          className="formInput"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Enter username"
+        />
 
-      <div className="logInPageChild"></div>
-      <div className="gameIconsangelOutfit"></div>
-      <div className="wings">
-        <span className="wings1">Wings</span>
-      </div>
-      <div className="everyAngelNeedsContainer">
-        Every angel needs their wings
-      </div>
-      <div className="lineMdheartTwotoneIcon"></div>
-      <div className="vectorIcon"></div>
-      <div className="loginsignUp">Login/Sign Up</div>
+        <label className="formLabel">Password</label>
+        <input
+          type="password"
+          className="formInput"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Enter password"
+        />
 
-      {/* Form Inputs */}
-      <form onSubmit={handleSubmit}>
-        <div className="logInPageItem">
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            placeholder="Username"
-            style={{
-              width: '100%',
-              height: '100%',
-              border: 'none',
-              borderRadius: '30px',
-              padding: '0 20px',
-              fontSize: '1rem',
-              outline: 'none',
-              background: 'transparent'
-            }}
-          />
-        </div>
-
-        <label className="username">Username</label>
-
-        <div className="logInPageInner">
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-            style={{
-              width: '100%',
-              height: '100%',
-              border: 'none',
-              borderRadius: '30px',
-              padding: '0 20px',
-              fontSize: '1rem',
-              outline: 'none',
-              background: 'transparent'
-            }}
-          />
-        </div>
-
-        <label className="password">Password</label>
+        <button type="submit" className="submitButton">Log In</button>
       </form>
     </div>
   );
 };
 
 export default Login;
-
-
