@@ -5,7 +5,7 @@ import { Home } from './pages/Home.js'
 import  Login  from './pages/Login.js'
 import { Showcase } from './pages/Showcase.js'
 import SignUp from './pages/SignUp.js';
-
+import { Map } from './pages/Map.js'
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
           <Route path="/login" element={<Login />}/>
           <Route path="/showcase" element={<Showcase />}/>
           <Route path="/signup" element={<SignUp />}/>
+          <Route path="/map" element={<Map />}/>
         </Routes>
       </Router>
 
