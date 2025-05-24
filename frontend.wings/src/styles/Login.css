@@ -1,0 +1,160 @@
+groupChild {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 30px;
+    background-color: #ee94ca;
+    width: 259px;
+    height: 58.4px;
+    }
+
+    .login {
+        position: absolute;
+        top: 12px;
+        left: 77px;
+        display: inline-block;
+        width: 84px;
+        height: 35px;
+        }
+        .rectangleParent {
+        position: absolute;
+        top: 541px;
+        left: 139px;
+        width: 259px;
+        height: 58.4px;
+        color: #fff;
+        }
+        .image8 {
+        position: absolute;
+        top: -9px;
+        left: 793px;
+        filter: drop-shadow(0px 3.7064220905303955px 3.71px rgba(0, 0, 0, 0.25));
+        width: 589px;
+        height: 850px;
+        }
+        .image6Icon {
+        position: absolute;
+        top: -40px;
+        left: 571px;
+        width: 833px;
+        height: 872px;
+        object-fit: cover;
+        }
+        .logInPageChild {
+        position: absolute;
+        top: 544px;
+        left: 340px;
+        border-radius: 50%;
+        background-color: #fff;
+        width: 52px;
+        height: 52px;
+        }
+        .gameIconsangelOutfit {
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        width: 53.1px;
+        height: 53.1px;
+        }
+        .wings {
+        position: absolute;
+        top: 20.04px;
+        left: 84.53px;
+        font-size: 37.96px;
+        display: inline-block;
+        width: 184.5px;
+        height: 50.1px;
+        }
+        .wings1 {
+        color: #6b095b;
+        }
+        .everyAngelNeedsContainer {
+        position: absolute;
+        top: 753px;
+        left: 392px;
+        font-size: 15px;
+        display: inline-block;
+        width: 133px;
+        height: 57px;
+        }
+        .lineMdheartTwotoneIcon {
+        position: absolute;
+        top: 765px;
+        left: 492px;
+        width: 23px;
+        height: 23px;
+        }
+        .vectorIcon {
+        position: absolute;
+        height: 3.83%;
+        width: 3.02%;
+        top: 66.71%;
+        right: 69.88%;
+        bottom: 29.46%;
+        left: 27.11%;
+        max-width: 100%;
+        overflow: hidden;
+        max-height: 100%;
+        }
+        .loginsignUp {
+        position: absolute;
+        top: 33px;
+        left: 403px;
+        font-size: 20px;
+        text-decoration: underline;
+        display: inline-block;
+        color: #6b095b;
+        width: 149px;
+        height: 24px;
+        }
+        .logInPageItem {
+        position: absolute;
+        top: 251px;
+        left: 64px;
+        border-radius: 30px;
+        background-color: #fff;
+        border: 1px solid #6b095b;
+        box-sizing: border-box;
+        width: 406px;
+        height: 67px;
+        }
+        .logInPageInner {
+        position: absolute;
+        top: 396px;
+        left: 64px;
+        border-radius: 30px;
+        background-color: #fff;
+        border: 1px solid #6b095b;
+        box-sizing: border-box;
+        width: 406px;
+        height: 67px;
+        }
+        .username {
+        position: absolute;
+        top: 208px;
+        left: 75px;
+        display: inline-block;
+        width: 185px;
+        height: 31px;
+        }
+        .password {
+        position: absolute;
+        top: 353px;
+        left: 74px;
+        display: inline-block;
+        width: 185px;
+        height: 31px;
+        }
+        .logInPage {
+        width: 100%;
+        position: relative;
+        background-color: #f4e6ff;
+        height: 832px;
+        overflow: hidden;
+        text-align: left;
+        font-size: 27.8px;
+        color: #000;
+        font-family: Inter;
+ }
+        
+        
