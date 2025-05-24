@@ -155,6 +155,49 @@ groupChild {
         font-size: 27.8px;
         color: #000;
         font-family: Inter;
+        .formContainer {
+            position: absolute;
+            top: 200px;
+            left: 64px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 406px;
+          }
+          
+          .formLabel {
+            font-family: 'Hanken Grotesk';
+            font-size: 20px;
+            color: #000;
+            margin-left: 10px;
+          }
+          
+          .formInput {
+            border: 1px solid #6b095b;
+            border-radius: 30px;
+            height: 45px;
+            padding: 0 20px;
+            font-size: 16px;
+            font-family: 'Hanken Grotesk';
+            background-color: #fff;
+          }
+          
+          .submitButton {
+            margin-top: 20px;
+            height: 50px;
+            background-color: #ee94ca;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-family: 'Hanken Grotesk';
+            cursor: pointer;
+          }
+          
+          .submitButton:hover {
+            background-color: #d67ab0;
+          }
+          
  }
         
         
