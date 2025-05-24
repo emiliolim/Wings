@@ -5,3 +5,6 @@ flask-cors~=4.0.0
 dotenv~=0.9.9
 python-dotenv~=1.1.0
 pg8000~=1.31.2
+Flask-Migrate~=4.1.0
+Flask_Restful~=0.3.10
+Flask-Bcrypt~=1.0.1
