@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import park from "../images/aldrich-park.jpg";
+import { WingsIcon } from "../components/icons";
 import "../styles/Login.css";
+import { useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,17 +18,20 @@ const Login = () => {
   };
 
   return (
-    <div className="logInPage">
-      <div className="image8" />
-      <img className="image6Icon" src={park} alt="Aldrich Park" />
-      <div className="gameIconsangelOutfit" />
-      <div className="wings"><span className="wings1">Wings</span></div>
-      <div className="everyAngelNeedsContainer">Every angel needs their wings</div>
-      <div className="lineMdheartTwotoneIcon" />
-      <div className="vectorIcon" />
-      <div className="loginsignUp">Log In or Sign Up</div>
-
-      <form onSubmit={handleSubmit} className="formContainer">
+    <main className="main_container">
+      {/*Left Side*/}
+      <section className="left-grid">
+        <section className="top-bar">
+        <div className="WingsLogo" onClick={() => {navigate("/")}} style={{ cursor: "pointer" }}>
+          <WingsIcon />
+          <p className="WingsText">Wings</p>
+          </div>
+          <button className="LoginSignUp" onClick={() => {navigate("/signup")}}>
+            Sign up
+          </button>
+        </section>
+        <section className="middle-bar">
+        <form onSubmit={handleSubmit} className="formContainer">
         <label className="formLabel">Username</label>
         <input
           type="text"
@@ -44,8 +52,19 @@ const Login = () => {
 
         <button type="submit" className="submitButton">Log In</button>
       </form>
-    </div>
+        </section>
+        
+      </section>
+      <section className="right-grid">
+       {/*Right Side Image*/}
+        <div>
+          <img src={park} alt="Description of image" />
+        </div>
+      </section>
+    </main>
+    
   );
 };
 
 export default Login;
+
