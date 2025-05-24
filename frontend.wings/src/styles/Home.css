@@ -82,7 +82,7 @@
 
 .main-text{
     font-weight: bold;
-    font-size: 275%;
+    font-size: 2rem;
     text-align: left;
     align-items: center;
     justify-content: center;
@@ -99,7 +99,7 @@
 
 .bottom-text {
     margin-top:0px;
-    font-size: 200%;
+    font-size: 1.5rem;
      padding-left: 30px;
 }
 
