@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import park from '../images/aldrich-park.png';
+import park from '../images/aldrich-park.jpg';
 import '../styles/Login.css';
 
 const Login = () => {

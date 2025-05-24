@@ -4,6 +4,7 @@ import './App.css';
 import { Home } from './pages/Home.js'
 import  Login  from './pages/Login.js'
 import { Showcase } from './pages/Showcase.js'
+import SignUp from './pages/SignUp.js';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="/login" element={<Login />}/>
           <Route path="/showcase" element={<Showcase />}/>
+          <Route path="/signup" element={<SignUp />}/>
         </Routes>
       </Router>
 
