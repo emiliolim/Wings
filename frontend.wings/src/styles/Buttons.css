@@ -1,13 +1,14 @@
 .explore-button {
     padding: 5px 5px;
-    gap: 5px;
+    gap: 15px;
     background-color: #EE94CA;
     color: white;
     border: none;
     border-radius: 30px;
+    width: 40%;
     
 
-    font-family: Arial;
+    font-family: 'DM Sans';
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -20,7 +21,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
+    
 }
 
 .explore-button:hover {
