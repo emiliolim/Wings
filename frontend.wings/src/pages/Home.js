@@ -15,7 +15,7 @@ export const Home = () => {
         <section className="top-bar">
           <div className="WingsLogo">
           <WingsIcon />
-          <p className="WingsText">Wings</p>
+          <p className="WingsText" onClick={() => navigate("/")}>Wings</p>
           </div>
           <button className="LoginSignUp" onClick={() => {navigate("/login")}}>
             Login/Sign up
@@ -34,7 +34,7 @@ export const Home = () => {
           </div>
         </section>
         <div className="explore-button-wrapper">
-          <ExploreButton>
+          <ExploreButton onClick={() => {navigate("/map")}}>
           </ExploreButton>
           <p className="explore-text">Every Angel needs their <span className="bolded-wings">Wings!</span><span><img src={heart} className="heart-home" alt="Heart icon" /></span></p>
 
