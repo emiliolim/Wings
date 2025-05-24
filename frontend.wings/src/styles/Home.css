@@ -136,6 +136,10 @@
   50% { border-color: #6B095B }
 }
 
+.explore-text {
+    padding-top:1rem;
+}
+
 .heart-home {
   height: 20px;
   vertical-align: middle;
