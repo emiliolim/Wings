@@ -1,0 +1,38 @@
+.explore-button {
+    padding: 5px 5px;
+    gap: 5px;
+    background-color: #EE94CA;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    
+
+    font-family: Arial;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.explore-button:hover {
+  background-color: #eeaed4;
+}
+
+.icon-circle {
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
