@@ -1,0 +1,88 @@
+.body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+}
+
+.main_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.left-grid, .right-grid {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.left-grid {
+    background-color: #F4E6FF;
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
+    overflow-x: hidden;
+}
+
+.right-grid img {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 10px;
+}
+
+
+.WingsLogo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.WingsText {
+    padding: 0;
+    font-size: 175%;
+    margin-top:10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.LoginSignUp {
+    display: grid;
+    background-color: #F4E6FF;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-top: 35px;
+    margin-right: 40px;
+    color: #6B095B;
+    cursor: pointer;
+}
+
+.main-text-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width:100%;
+    text-align: left;
+}
+
+.main-text{
+    font-weight: bold;
+    font-size: 250%;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+
