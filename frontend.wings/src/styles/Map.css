@@ -1,0 +1,14 @@
+main{
+    background-color: #EE94CA;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+map-body{
+    background-color: aquamarine;
+}
