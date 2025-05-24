@@ -1,9 +1,11 @@
 import React from "react";
 import {WingsIcon} from '../components/icons'
 import park from '../images/aldrich-park.jpg'
+import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css'
 
 export const Home = () => {
+  const navigate = useNavigate();
   return (
     <main className="main_container">
       {/*Left Side*/}
@@ -13,7 +15,7 @@ export const Home = () => {
           <WingsIcon />
           <p className="WingsText">Wings</p>
           </div>
-          <button className="LoginSignUp">
+          <button className="LoginSignUp" onClick={() => {navigate("/login")}}>
             Login/Sign up
           </button>
         </section>
