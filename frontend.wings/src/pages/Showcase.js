@@ -2,6 +2,7 @@ import React from "react";
 
 import {WingsIcon, ArrowIcon} from '../components/icons'
 import { ExploreButton } from "../components/buttons";
+import { InfoCard } from "../components/mapComponents";
 
 export const Showcase = () => {
   return (
