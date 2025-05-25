@@ -1,4 +1,7 @@
 import React, {useEffect, useState, useRef, useCallback} from 'react';
+import {XIcon, MarkerIcon, PackageIcon} from './icons';
+import defaultImage from "../images/aldrich-park.jpg";
+
 import {
   APIProvider,
   Map,
@@ -15,7 +18,9 @@ import {product_locations} from '../components/locationData'
 const API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
 const MAP_ID = process.env.REACT_APP_MAP_ID
 
+// Map values
 const aldrich_park = {lat: 33.64601898038214, lng: -117.842742745889385 }
+const initial_zoom = 16
 const uciRestriction = {
     latLngBounds: {
       north: 33.658871, // Northernmost latitude of UCI
@@ -25,16 +30,20 @@ const uciRestriction = {
     },
     strictBounds: true,
   };
-
+  
 export const MapComponent = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
-  const [mapCenter, setMapCenter] = useState(aldrich_park);
-  const [mapZoom, setMapZoom] = useState(16);
+  const [defaultMapCenter, setDefaultMapCenter] = useState(aldrich_park);
+  const [mapCenter, setMapCenter] = useState(null);
+  const [defaultZoom, setDefaultZoom] = useState(initial_zoom);
+  const [mapZoom, setMapZoom] = useState(null);
 
   const handleMarkerClick = (location) => {
     console.log(`Clicked on ${location.name}`);
     setSelectedLocation(location);
+    setDefaultMapCenter(null)
     setMapCenter(location.position);
+    setDefaultZoom(null)
     setMapZoom(18);
   };
 
@@ -49,7 +58,9 @@ export const MapComponent = () => {
       <div className="mapContainer">
         <Map
           className="map"
+          defaultCenter={defaultMapCenter}
           center={mapCenter}
+          defaultZoom = {defaultZoom}
           zoom={mapZoom}
           gestureHandling={'greedy'}
           disableDefaultUI={true}
@@ -60,7 +71,7 @@ export const MapComponent = () => {
               <Marker
                 key={index} 
                 position={location.position}
-                title={location.key}
+                title={location.name}
                 onClick={() => handleMarkerClick(location)}
               />
             ))}
@@ -83,33 +94,61 @@ export const InfoCard = ({location, onClose}) => {
   return (
     <div className="infoCard">
       {/*Location Name and Close Button top right*/}
-      <div>
+      <div className="infoCard-name">
+        <h3 className="infoCard-header">
+          {location.name}
+        </h3>
+        <button className="infoCard-close-button"onClick={onClose}>
+          <XIcon/>
+        </button>
+      </div>
+      {/*Location Image */}
+      <div className="infoCard-image">
+      </div>
+      <div className="infoCard-line">
+      </div>
 
-      </div>
-      {/*Location Image*/}
-      <div>
-      </div>
       {/*Information Box*/}
-      <div>
+      <div className="infoCard-details">
         {/*Location*/}
+        <div className="infoCard-details-line">
+          <MarkerIcon/>
+          <h4>
+            {location.name}
+          </h4>
+        </div>
         {/*Stocked*/}
+        <div className="infoCard-details-line">
+          <PackageIcon/>
+          <h4>
+            In Stock
+          </h4>
+        </div>
         {/*Notes*/}
+        <div className="infoCard-details-line">
+          <h4>
+          Items: Pads/Tampons
+          </h4>
+        </div>
+        <div className="infoCard-details-line">
+          <p>
+            This location has {location.rrType} restrooms
+          </p>
+        </div>
+        <div className="infoCard-details-line">
+          <p>
+            This location has {location.rrType} restrooms
+          </p>
+        </div>
+        
         {/*Items*/}
       </div>
       {/*Report Out of Stock*/}
-      
-      <div>
-        <button className="explore-button"onClick={onClose}>
-          Close
-        </button>
-      </div>
-      <h1>
-        {location.name}
-      </h1>
-      <button className="explore-button"onClick={onClose}>
+      <div className="infoCard-button-container">
+        <button className="infoCard-report-button"onClick={onClose}>
           Report Out of Stock
         </button>
-
+      </div>
     </div>
   )
 }
