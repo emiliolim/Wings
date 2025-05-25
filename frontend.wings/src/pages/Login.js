@@ -35,7 +35,7 @@ const Login = () => {
     if(response.status == 200)
     {
       localStorage.setItem('token', data.token);
-      alert("Login successful");
+      // alert("Login successful");
       navigate('/map');
     }
     else

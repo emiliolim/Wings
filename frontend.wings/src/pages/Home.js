@@ -71,7 +71,7 @@ export const Home = () => {
                 href="https://github.com/emiliolim/Wings"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ position: "absolute", top: "840px", right: "20px" }}
+                style={{ position: "absolute", top: "550px", right: "20px" }}
               >
                 <GitHubIcon />
               </a>
