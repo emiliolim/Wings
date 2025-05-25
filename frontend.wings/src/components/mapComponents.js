@@ -38,6 +38,7 @@ export const MapComponent = () => {
   const [mapCenter, setMapCenter] = useState(null);
   const [defaultZoom, setDefaultZoom] = useState(initial_zoom);
   const [mapZoom, setMapZoom] = useState(null);
+  const [userLocation, setUserLocation] = useState(null);
 
   const updateStockedStatus = useCallback((key, newStatus) => {
     setLocations(prevLocations => 
@@ -53,6 +54,46 @@ export const MapComponent = () => {
     );
   }, []);
 
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          const userPos = { lat: latitude, lng: longitude };
+          setUserLocation(userPos);
+
+          if (isWithinUCIBounds(userPos)) {
+            console.log("Inside UCI");
+            setDefaultMapCenter(userPos);
+            setDefaultZoom(17); // Zoom in closer when centering on user
+          } else {
+            console.log("Outside UCI");
+            // User is outside UCI bounds, default to Aldrich Park
+            setDefaultMapCenter(aldrich_park);
+            setDefaultZoom(initial_zoom);
+          }
+        },
+        (error) => {
+          console.error("Error getting user location:", error);
+          // Geolocation failed, default to Aldrich Park
+          setDefaultMapCenter(aldrich_park);
+          setDefaultZoom(initial_zoom);
+        }
+      );
+    } else {
+      console.error("Geolocation is not supported by this browser.");
+      // Geolocation not supported, default to Aldrich Park
+      setDefaultMapCenter(aldrich_park);
+      setDefaultZoom(initial_zoom);
+    }
+  }, []);
+
+  const isWithinUCIBounds = (position) => {
+    return position.lat >= uciRestriction.latLngBounds.south &&
+           position.lat <= uciRestriction.latLngBounds.north &&
+           position.lng >= uciRestriction.latLngBounds.west &&
+           position.lng <= uciRestriction.latLngBounds.east;
+  };
 
   const handleMarkerClick = (location) => {
     console.log(`Clicked on ${location.name}`);
@@ -101,6 +142,18 @@ export const MapComponent = () => {
               
               </AdvancedMarker>
             ))}
+          {userLocation && isWithinUCIBounds(userLocation) && (
+          <AdvancedMarker
+            position={userLocation}
+            title="Your Location"
+          >
+            <Pin
+              background={'#4285F4'}
+              borderColor={'#1E40AF'}
+              glyphColor={'#FFFFFF'}
+            />
+          </AdvancedMarker>
+        )}
         </Map>
         {selectedLocation && (
           <div>
