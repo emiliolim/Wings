@@ -4,6 +4,18 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  .left-grid, .right-grid {
+    display: flex;
+    overflow-x: hidden;
+  }
+  
+  .left-grid {
+      background-color: #F4E6FF;
+      display: grid;
+      grid-template-rows: 1fr 10fr 1fr;
+      overflow-x: hidden;
+  }
   
   /* Container */
   .signup-container {
@@ -14,18 +26,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  /* Background image */
-  .background-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(0.7);
   }
   
   /* Sign-up box */
@@ -71,154 +71,30 @@
   }
   
   .signup-box button {
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #333;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-top: 20px;
+            font-weight: bold;
+            position: relative;
+            height: 50px;
+            background-color: #ee94ca;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-family: 'DM Sans', sans-serif;
+            cursor: pointer;
   }
   
   .signup-box button:hover {
     background-color: #555;
   }
-  .image8 {
-    position: absolute;
-    top: -9px;
-    left: 793px;
-    filter: drop-shadow(0px 3.7064220905303955px 3.71px rgba(0, 0, 0, 0.25));
-    width: 589px;
-    height: 850px;
-}
-.image6Icon {
-    position: absolute;
-    top: -40px;
-    left: 571px;
-    width: 833px;
-    height: 872px;
-    object-fit: cover;
-}
-.gameIconsangelOutfit {
-    position: absolute;
-    top: 17px;
-    left: 20px;
-    width: 53.1px;
-    height: 53.1px;
-}
-.wings {
-    position: absolute;
-    top: 20.04px;
-    left: 84.53px;
-    font-size: 37.96px;
-    display: inline-block;
-    font-family: Amaranth;
-    width: 184.5px;
-    height: 50.1px;
-}
+
+
+
 .wings1 {
     color: #6b095b;
 }
-.everyAngelNeedsContainer {
-    position: absolute;
-    top: 753px;
-    left: 392px;
-    font-size: 15px;
-    display: inline-block;
-    width: 133px;
-    height: 57px;
-    font-family: Inter;
-}
-.lineMdheartTwotoneIcon {
-    position: absolute;
-    top: 765px;
-    left: 492px;
-    width: 23px;
-    height: 23px;
-}
-.groupChild {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    left: 0%;
-    border-radius: 30px;
-    background-color: #ee94ca;
-}
-.login {
-    position: absolute;
-    height: 59.93%;
-    width: 32.43%;
-    top: 20.55%;
-    left: 29.73%;
-    display: inline-block;
-}
-.rectangleParent {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    left: 0%;
-}
-.component1Child {
-    position: absolute;
-    height: 89.04%;
-    width: 20.08%;
-    top: 5.14%;
-    right: 2.32%;
-    bottom: 5.82%;
-    left: 77.61%;
-    border-radius: 50%;
-    background-color: #fff;
-}
-.vectorIcon {
-    position: absolute;
-    height: 54.62%;
-    width: 14.9%;
-    top: 23.97%;
-    right: 4.79%;
-    bottom: 21.4%;
-    left: 80.31%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-.component1 {
-    position: absolute;
-    top: 541px;
-    left: 139px;
-    width: 259px;
-    height: 58.4px;
-    color: #fff;
-}
-.loginsignUp {
-    position: absolute;
-    top: 33px;
-    left: 403px;
-    font-size: 20px;
-    text-decoration: underline;
-    display: inline-block;
-    font-family: Figtree;
-    color: #6b095b;
-    width: 149px;
-    height: 24px;
-}
-.logInPageChild {
-    position: absolute;
-    top: 251px;
-    left: 64px;
-    border-radius: 30px;
-    background-color: #fff;
-    border: 1px solid #6b095b;
-    box-sizing: border-box;
-    width: 406px;
-    height: 67px;
-}
+
+
 .logInPageItem {
     position: absolute;
     top: 396px;
@@ -231,20 +107,24 @@
     height: 67px;
 }
 .username {
-    position: absolute;
-    top: 208px;
-    left: 75px;
-    display: inline-block;
-    width: 185px;
-    height: 31px;
+  position: relative;
+  font-weight: bold;
+  font-family: 'DM Sans', sans-serif;
+  top: 100px;
+  left: 90px;
+  display: flex;
+  width: 185px;
+  height: 31px;
 }
 .password {
-    position: absolute;
-    top: 353px;
-    left: 74px;
-    display: inline-block;
-    width: 185px;
-    height: 31px;
+  position: relative;
+  font-family: 'DM Sans', sans-serif;
+  top: 353px;
+  left: 90px;
+  display: flex;
+  width: 185px;
+  height: 31px;
+
 }
 .logInPage {
     width: 100%;
@@ -259,8 +139,8 @@
 }
 
 .formContainer {
-    position: absolute;
-    top: 150px;
+    position: relative;
+    top: 75px;
     left: 64px;
     display: flex;
     flex-direction: column;
@@ -269,7 +149,7 @@
   }
   
   .formLabel {
-    font-family: 'Hanken Grotesk';
+    font-family: 'DM Sans';
     font-size: 20px;
     color: #000;
     margin-left: 10px;
@@ -279,9 +159,8 @@
     border: 1px solid #6b095b;
     border-radius: 30px;
     height: 45px;
-    padding: 0 20px;
+    padding: 20px;
     font-size: 16px;
-    font-family: 'Hanken Grotesk';
     background-color: #fff;
   }
   
@@ -301,6 +180,13 @@
     background-color: #d67ab0;
   }
 
+  .right-grid img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    max-width: 100%
+  }
   
   
 
