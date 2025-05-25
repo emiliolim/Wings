@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.API_URL;
+export const API_URL = process.env.API_URL;
 export const get_users = async () =>
 {
     const response = await axios.get(`${API_URL}/users`);
