@@ -41,7 +41,11 @@ def add_user():
     # form data
     username = request.form.get('username')
     password_hash = request.form.get('password_hash')
+    # password_hash = bcrypt.generate_password_hash(password_hash).decode('utf-8')
     email = request.form.get('email')
+
+    if not username or not password_hash or not email:
+        return jsonify({'error': 'missing fields'}), 400
 
     try:
         new_user = Users(
