@@ -141,8 +141,9 @@
 }
 
 .heart-home {
-  height: 20px;
-  vertical-align: middle;
-  margin-left: 4px;
-  margin-bottom: 6px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left: 4px;
+    margin-bottom: 6px;
 }

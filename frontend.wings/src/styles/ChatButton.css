@@ -27,6 +27,7 @@ body {
 }
 
 
+
 .chat-btn {
     position: fixed;
     right: 50px;
@@ -117,7 +118,7 @@ body {
     justify-content: center;
 }
 
-input[type="text"] {
+.input-area-text {
     width: 100%;
     border: 1px black;
     border-style: solid;

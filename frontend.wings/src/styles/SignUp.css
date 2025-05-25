@@ -32,7 +32,7 @@
   .signup-box {
     background-color: rgba(255, 255, 255, 0.95);
     padding: 40px;
-    border-radius: 16px;
+    border-radius: 30px;
     width: 350px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
@@ -59,7 +59,7 @@
     margin-bottom: 16px;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 30px;
     font-size: 14px;
     background: #f9f9f9;
   }
@@ -72,16 +72,16 @@
   
   .signup-box button {
     margin-top: 20px;
-            font-weight: bold;
-            position: relative;
-            height: 50px;
-            background-color: #ee94ca;
-            color: white;
-            border: none;
-            border-radius: 30px;
-            font-size: 18px;
-            font-family: 'DM Sans', sans-serif;
-            cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    height: 50px;
+    background-color: #ee94ca;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
   }
   
   .signup-box button:hover {
@@ -96,15 +96,15 @@
 
 
 .logInPageItem {
-    position: absolute;
-    top: 396px;
-    left: 64px;
-    border-radius: 30px;
-    background-color: #fff;
-    border: 1px solid #6b095b;
-    box-sizing: border-box;
-    width: 406px;
-    height: 67px;
+  position: absolute;
+  top: 396px;
+  left: 64px;
+  border-radius: 30px;
+  background-color: #fff;
+  border: 1px solid #6b095b;
+  box-sizing: border-box;
+  width: 406px;
+  height: 67px;
 }
 .username {
   position: relative;
@@ -144,7 +144,7 @@
     left: 64px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
     width: 406px;
   }
   
