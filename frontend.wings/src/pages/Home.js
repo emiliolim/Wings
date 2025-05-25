@@ -1,5 +1,5 @@
 import React from "react";
-import {WingsIcon} from '../components/icons'
+import {GitHubIcon, WingsIcon} from '../components/icons'
 import park from '../images/aldrich-park.jpg'
 import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css'
@@ -67,6 +67,14 @@ export const Home = () => {
        {/*Right Side Image*/}
         <div>
           <img src={park} alt="Description of image" />
+          <a
+                href="https://github.com/emiliolim/Wings"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ position: "absolute", top: "840px", right: "20px" }}
+              >
+                <GitHubIcon />
+              </a>
         </div>
       </section>
     </main>
