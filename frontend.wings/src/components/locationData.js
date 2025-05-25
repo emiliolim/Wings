@@ -30,7 +30,8 @@ export const product_locations = [
   {key: 123, name: "Social Science Plaza A SSPA", mapNumber: 211, position: {lat: 33.646979153673264, lng:  -117.83957274957781}, floor: 1, room: "1152", rrType: "Womens", PT: 1, Notes: ""},
   {key: 30, name: "Croul Hall CRH", mapNumber: 417, position: {lat: 33.643664470769394, lng: -117.8446809654478}, floor: 1, room: "1303", rrType: "Womens", PT: 1, Notes: ""},
 
-
+]
+/*
   {key: 8, name: "Art Studio ART", mapNumber: 722, position: {lat: null, lng: null}, floor: 1, room: "169", rrType: "Womens", PT: 2, Notes: ""},
   {key: 9, name: "Arts Instruction & Technology Resourse Center AITR", mapNumber: 714, position: {lat: null, lng: null}, floor: 1, room: "192B", rrType: "Womens", PT: 1, Notes: ""},
   {key: 10, name: "Beckman Laser Institute BLI", mapNumber: 817, position: {lat: null, lng: null}, floor: 1, room: "C104", rrType: "Womens", PT: 1, Notes: ""},
@@ -137,4 +138,4 @@ export const product_locations = [
   {key: 133, name: "Tamkin Student Lecture Bldg.", mapNumber: 831, position: {lat: null, lng: null}, floor: 1, room: "F111", rrType: "Womens", PT: 2, Notes: ""},
 
 
-]
+*/

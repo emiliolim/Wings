@@ -8,11 +8,8 @@ import { useNavigate } from 'react-router-dom';
 import { ChatIcon } from '../components/icons.js'
 import ChatButton from "../components/chatbutton.js";
 
-export const Map = () => {
-  const navigate = useNavigate();
-  return (
-    <main className="map-container"> 
-      <div className="top-grid">
+/*
+<div className="top-grid">
       <section className="top-bar">
         <div className="WingsLogo" onClick={() => { navigate("/"); } } style={{ cursor: "pointer" }}>
           <WingsIcon />
@@ -22,10 +19,21 @@ export const Map = () => {
         </button>
       </section>
     </div><div className="bottom-grid">
-        <div className="flex h-screen w-screen">
-          <MapComponent></MapComponent>
+*/
+export const Map = () => {
+  const navigate = useNavigate();
+  return (
+    <main className="map-container"> 
+        <div className="logo">
+          <div className="wings-logo" onClick={() => { navigate("/"); } } style={{ cursor: "pointer" }}>
+            <WingsIcon />
+            <p className="WingsText" onClick={() => navigate("/")} style={{ cursor: "pointer" }}>Wings</p>
+          </div>
         </div>
-      </div>
+        <div className="">
+            <MapComponent/>
+          </div>
+        
       </main>
   );
 };
