@@ -26,9 +26,6 @@ body {
     padding:0 1rem;
 }
 
-p {
-    font-size: 2rem;
-}
 
 .chat-btn {
     position: fixed;
