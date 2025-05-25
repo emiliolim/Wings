@@ -21,6 +21,16 @@ export const Home = () => {
       localStorage.removeItem("token");
     }
   }
+  
+  const handleLogin = () => {
+    if(username) {
+      localStorage.removeItem("token");
+      window.location.reload();
+    } else {
+      navigate("/login");
+    }
+  };
+
   return (
     <main className="main_container">
       {/*Left Side*/}
@@ -30,7 +40,7 @@ export const Home = () => {
           <WingsIcon />
           <p className="WingsText" onClick={() => navigate("/")}>Wings</p>
           </div>
-          <button className="LoginSignUp" onClick={() => {navigate("/login")}}>
+          <button className="LoginSignUp" onClick={() => {handleLogin()}}>
             {username ? `Hi ${username}` : "Login/Sign up"}
           </button>
         </section>

@@ -67,6 +67,10 @@ map-body{
   gap: 10px;
 }
 
+.logo:hover {
+  background-color: pink;
+}
+
 .top-grid {
   background-color: #F4E6FF;
 }

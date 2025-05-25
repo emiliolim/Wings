@@ -30,7 +30,7 @@ const SignUp = () => {
     try
     {
       await add_user(formData);
-      navigate('/map');
+      navigate('/login');
     }
     catch(error)
     {
