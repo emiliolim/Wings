@@ -4,6 +4,8 @@ from sqlalchemy.exc import IntegrityError
 from app import db, bcrypt
 import os
 from werkzeug.utils import secure_filename
+import datetime
+import jwt
 
 routes = Blueprint('routes', __name__)
 
@@ -21,11 +23,11 @@ def get_users():
     } for user in users])
 
 @routes.route('/users/<int:id>', methods=['GET'])
-def get_user():
+def get_user(id):
     """
     return: retrieve a single user
     """
-    user = db.session.get(StuffedAnimals, animal_id)
+    user = db.session.get(Users, id)
     return jsonify({
         'id': user.id,
         'username': user.username,
@@ -47,8 +49,8 @@ def add_user():
         return jsonify({'error': 'missing fields'}), 400
 
     try:
-        byte = password.encode('utf-8')
-        hashpass = bcrypt.generate_password_hash(byte)
+        # byte = password.encode('utf-8')
+        hashpass = bcrypt.generate_password_hash(password).decode('utf-8')
         new_user = Users(
             username=username,
             password_hash=hashpass,
@@ -89,6 +91,27 @@ def delete_user(id):
     db.session.commit(id)
 
     return jsonify({'message': 'animal deleted!'}), 200
+
+@routes.route('/login', methods=['POST'])
+def login():
+    username = request.form.get('username')
+    password = request.form.get('password')
+
+    if not username or not password:
+        return jsonify({'error': 'Missing username or password'}), 400
+    
+    user = Users.query.filter_by(username=username).first()
+
+    # check if user exists in db and password matches hashed password
+    if user and bcrypt.check_password_hash(user.password_hash, password):
+        token = jwt.encode({
+            'username': user.username,
+            'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+        }, current_app.config['SECRET_KEY'], algorithm='HS256')
+
+        return jsonify({'token': token}), 200
+    return jsonify({'error': 'invalid credentials'}), 401
+
 
 @routes.route('/')
 def home():

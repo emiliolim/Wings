@@ -5,9 +5,22 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css'
 import { ExploreButton } from "../components/buttons";
 import heart from '../images/heart_for_homepage.png'
+import { jwtDecode } from "jwt-decode";
 
 export const Home = () => {
   const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+
+  let username = null;
+  if(token) {
+    try {
+      const decoded = jwtDecode(token);
+      username = decoded.username;
+    } catch(err) {
+      console.error("Invalid token");
+      localStorage.removeItem("token");
+    }
+  }
   return (
     <main className="main_container">
       {/*Left Side*/}
@@ -18,7 +31,7 @@ export const Home = () => {
           <p className="WingsText" onClick={() => navigate("/")}>Wings</p>
           </div>
           <button className="LoginSignUp" onClick={() => {navigate("/login")}}>
-            Login/Sign up
+            {username ? `Hi ${username}` : "Login/Sign up"}
           </button>
         </section>
         <section className="middle-bar">
