@@ -9,9 +9,7 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  // const [newUser, setNewUser] = useState({
-  //   username:'', password:'', email:''
-  // })
+ 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -24,7 +22,7 @@ const SignUp = () => {
     const formData = new FormData()
 
     formData.append('username', username);
-    formData.append('password_hash', password);
+    formData.append('password', password);
     formData.append('email', email);
 
     try
