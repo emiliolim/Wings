@@ -1,25 +1,41 @@
 import React, { useState } from "react";
 import park from "../images/aldrich-park.jpg";
 import "../styles/SignUp.css";
+import {add_user} from '../Api.js';
+import {useNavigate} from 'react-router-dom'
 import {WingsIcon} from '../components/icons'
-import { useNavigate } from 'react-router-dom';
-
 const SignUp = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-
+  // const [newUser, setNewUser] = useState({
+  //   username:'', password:'', email:''
+  // })
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
     console.log("Submitted:", { username, email, password });
-    // Add API call or backend logic here
+    const formData = new FormData()
+
+    formData.append('username', username);
+    formData.append('password_hash', password);
+    formData.append('email', email);
+
+    try
+    {
+      await add_user(formData);
+      navigate('/map');
+    }
+    catch(error)
+    {
+      console.error("error adding user", error);
+    }
   };
 
   return (

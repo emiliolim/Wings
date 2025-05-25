@@ -1,16 +1,16 @@
 import axios from 'axios';
 
-export const API_URL = 'https://localhost:5000';
+export const API_URL = 'http://localhost:5000';
 
 export const get_users = async () =>
 {
-    const response = await axios.get('${API_URL}/users');
+    const response = await axios.get(`${API_URL}/users`);
     return response.data;      
 };
 
 export const add_user = async (formData) =>
 {
-    const response = await axios.post('${API_URL}/users', formData, {
+    const response = await axios.post(`${API_URL}/users`, formData, {
         headers: {
             'Content-Type': 'multipart/form-data',
         },
@@ -20,7 +20,7 @@ export const add_user = async (formData) =>
 
 export const update_user = async (id, formData) =>
 {
-    const response = axios.post('${API_URL}/users/${id}', formData, {
+    const response = axios.post(`${API_URL}/users/${id}`, formData, {
         headers: {
             'Content-Type': 'multipart/form-data',
         },
@@ -30,6 +30,6 @@ export const update_user = async (id, formData) =>
 
 export const delete_user = async (id) =>
 {
-    const response = axios.post('${API_URL}/users/${id}');
+    const response = axios.post(`${API_URL}/users/${id}`);
     return response.data;
 };
