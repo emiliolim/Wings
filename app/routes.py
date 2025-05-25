@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify, current_app, send_from_directory
 from app.models import Users
 from sqlalchemy.exc import IntegrityError
-from app import db
+from app import db, bcrypt
 import os
 from werkzeug.utils import secure_filename
 
@@ -40,25 +40,27 @@ def add_user():
     """
     # form data
     username = request.form.get('username')
-    password_hash = request.form.get('password_hash')
-    # password_hash = bcrypt.generate_password_hash(password_hash).decode('utf-8')
+    password = request.form.get('password')
     email = request.form.get('email')
 
-    if not username or not password_hash or not email:
+    if not username or not password or not email:
         return jsonify({'error': 'missing fields'}), 400
 
     try:
+        byte = password.encode('utf-8')
+        hashpass = bcrypt.generate_password_hash(byte)
         new_user = Users(
             username=username,
-            password_hash=password_hash,
+            password_hash=hashpass,
             email=email
         )
         db.session.add(new_user)
         db.session.commit()
         return jsonify({'message': 'new user added'}), 201
 
-    except Exception:
+    except Exception as e:
         db.session.rollback()
+        print(f"Error message: {e}")
         return jsonify({'error': 'internal server error'}), 500
 
 @routes.route('/users/<int:id>', methods=['PUT'])
