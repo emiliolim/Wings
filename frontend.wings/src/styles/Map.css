@@ -6,7 +6,6 @@ main {
   flex-direction: column;
 }
 
-
 .map-container {
   display: grid;
   grid-template-rows: 3fr 4fr;
@@ -42,6 +41,30 @@ h1 {
 
 map-body{
     background-color: aquamarine;
+}
+
+.logo{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 5px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.wings-logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 
 .top-grid {

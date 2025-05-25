@@ -69,12 +69,21 @@ export const MapComponent = () => {
           mapId={MAP_ID}
         >
             {product_locations.map((location, index) => (
-              <Marker
+              <AdvancedMarker
                 key={index} 
                 position={location.position}
                 title={location.name}
                 onClick={() => handleMarkerClick(location)}
-              />
+              >
+                <div title={location.name}>
+                  <Pin
+                    background={'#6B095B'} // Change this to your desired color
+                    borderColor={'#8c0d77'} // Optional: change the border color
+                    glyphColor={'#FFFFFF'}
+                  />
+                </div>
+              
+              </AdvancedMarker>
             ))}
         </Map>
         {selectedLocation && (
