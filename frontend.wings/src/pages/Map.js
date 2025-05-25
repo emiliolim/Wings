@@ -13,19 +13,24 @@ export const Map = () => {
   return (
     <main className="map-container"> 
       <div className="top-grid">
-      <section className="top-bar">
-        <div className="WingsLogo" onClick={() => { navigate("/"); } } style={{ cursor: "pointer" }}>
-          <WingsIcon />
-          <p className="WingsText" onClick={() => navigate("/")} style={{ cursor: "pointer" }}>Wings</p>
-        </div>
-        <button className="Chat-Button" style={{ cursor: "pointer" }}>
-        </button>
-      </section>
-    </div><div className="bottom-grid">
+        <section className="top-bar">
+          <div
+            className="WingsLogo"
+            onClick={() => navigate("/")}
+            style={{ cursor: "pointer" }}
+          >
+            <WingsIcon />
+            <p className="WingsText">Wings</p>
+          </div>
+          <ChatButton />
+        </section>
+      </div>
+
+      <div className="bottom-grid">
         <div className="flex h-screen w-screen">
-          <MapComponent></MapComponent>
+          <MapComponent />
         </div>
       </div>
-      </main>
+    </main>
   );
 };
