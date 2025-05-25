@@ -16,7 +16,12 @@ export const XIcon = () => (
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M38 10L10 38M10 10L38 38" stroke="#6B095B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
+);
 
+export const ChatIcon = () => (
+<svg width="40" height="40" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27.0001 47.25C31.4931 47.2494 35.8584 45.7544 39.4086 43.0006C42.9588 40.2467 45.4923 36.3904 46.6102 32.0386C47.7282 27.6869 47.3671 23.0869 45.5838 18.9629C43.8006 14.8389 40.6964 11.4251 36.76 9.25887C32.8236 7.09269 28.2786 6.29718 23.8404 6.99758C19.4023 7.69798 15.3231 9.85451 12.2451 13.1277C9.16716 16.4008 7.26515 20.6047 6.83857 25.0774C6.41199 29.5502 7.48506 34.0378 9.88884 37.8338L6.75009 47.25L16.1663 44.1113C19.4054 46.167 23.1638 47.2559 27.0001 47.25Z" fill="#6B095B" stroke="#6B095B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 );
 
 export const MarkerIcon = () => (
