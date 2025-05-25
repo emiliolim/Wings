@@ -93,7 +93,7 @@ export const MapComponent = () => {
               >
                 <div title={location.name}>
                   <Pin
-                    background={'#6B095B'} 
+                    background={location.Stocked ? '#6B095B' : '#808080'} 
                     borderColor={'#8c0d77'}
                     glyphColor={'#FFFFFF'}
                   />
