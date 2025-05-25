@@ -27,7 +27,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  
+  max-width: 100%
 }
 
 .top-bar {
@@ -82,7 +82,7 @@
 
 .main-text{
     font-weight: bold;
-    font-size: 275%;
+    font-size: 2rem;
     text-align: left;
     align-items: center;
     justify-content: center;
@@ -99,7 +99,7 @@
 
 .bottom-text {
     margin-top:0px;
-    font-size: 200%;
+    font-size: 1.5rem;
      padding-left: 30px;
 }
 
@@ -116,10 +116,29 @@
     color: #6B095B;
 }
 
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #6B095B;
+  font-size: 1.5rem;
+  padding-left: 30px;
+  animation: typing 3s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { max-width: 0 }
+  to { max-width: 40ch; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #6B095B }
+}
+
 .heart-home {
   height: 20px;
   vertical-align: middle;
   margin-left: 4px;
   margin-bottom: 6px;
 }
-
