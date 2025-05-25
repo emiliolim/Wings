@@ -65,6 +65,7 @@ export const MapComponent = () => {
           gestureHandling={'greedy'}
           disableDefaultUI={true}
           restriction= {uciRestriction}
+          
           mapId={MAP_ID}
         >
             {product_locations.map((location, index) => (
@@ -114,7 +115,7 @@ export const InfoCard = ({location, onClose}) => {
         <div className="infoCard-details-line">
           <MarkerIcon/>
           <h4>
-            {location.name}
+            {location.name} (RM {location.room}, Floor {location.floor}) 
           </h4>
         </div>
         {/*Stocked*/}
@@ -132,12 +133,12 @@ export const InfoCard = ({location, onClose}) => {
         </div>
         <div className="infoCard-details-line">
           <p>
-            This location has {location.rrType} restrooms
+            This location has {location.rrType} restrooms.
           </p>
         </div>
         <div className="infoCard-details-line">
           <p>
-            This location has {location.rrType} restrooms
+            This location has {location.PT} dispensers.
           </p>
         </div>
         
