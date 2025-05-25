@@ -1,8 +1,30 @@
-.map-container{
+.mapContainer{
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: aquamarine;
+}
+
+.map{
+    position: absolute;
+    width: 90vw;
+    height: 90vh;
+}
+
+.infoCard{
+    position: absolute;
+    background-color: white;
+    width: 30vw;
+    height: 50vh;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+.infoCard-name{
+    display: flex;
 }
