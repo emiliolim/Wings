@@ -2,22 +2,25 @@ export const product_locations = [
   {key: 1, name: "Admin Modular", mapNumber: 423, position: {lat: 33.64189755, lng: -117.8461518}, floor: 1, room: "160 A", rrType: "Womens", PT: 0, Notes: ""},
   {key: 2, name: "Aldrich Hall ALH", mapNumber: 111, position: {lat: 33.64843875490595, lng: -117.84123903582041}, floor: 1, room: "106", rrType: "Womens", PT: 2, Notes: ""},
   {key: 3, name: "Aldrich Hall ALH", mapNumber: 111, position: {lat: 33.64843875490595, lng: -117.84123903582041}, floor: 2, room: "214", rrType: "Womens", PT: 2, Notes: ""},
-]
-/*
-  {key: 4, name: "Anteater Instruction & Research Building AIRB", mapNumber: 653, position: {lat: null, lng: null}, floor: 1, room: "1141", rrType: "Womens", PT: 1, Notes: ""},
-  {key: 5, name: "Anteater Learning Pavillion", mapNumber: 605, position: {lat: null, lng: null}, floor: 1, room: "1004", rrType: "Womens", PT: 0, Notes: ""},
-  {key: 6, name: "Anteater Learning Pavillion", mapNumber: 605, position: {lat: null, lng: null}, floor: 2, room: "2404", rrType: "Womens", PT: 0, Notes: ""},
-  {key: 7, name: "Anteater Learning Pavillion", mapNumber: 605, position: {lat: null, lng: null}, floor: 3, room: "3404", rrType: "Womens", PT: 0, Notes: ""},
+  {key: 4, name: "Anteater Instruction & Research Building AIRB", mapNumber: 653, position: {lat: 33.64291689720407, lng: -117.83820051712635}, floor: 1, room: "1141", rrType: "Womens", PT: 1, Notes: ""},
+  {key: 5, name: "Anteater Learning Pavillion", mapNumber: 605, position: {lat: 33.647050610509666, lng: -117.84471600989872}, floor: 1, room: "1004", rrType: "Womens", PT: 0, Notes: ""},
+  {key: 6, name: "Anteater Learning Pavillion", mapNumber: 605, position: {lat: 33.647050610509666, lng: -117.84471600989872}, floor: 2, room: "2404", rrType: "Womens", PT: 0, Notes: ""},
+  {key: 7, name: "Anteater Learning Pavillion", mapNumber: 605, position: {lat: 33.647050610509666, lng: -117.84471600989872}, floor: 3, room: "3404", rrType: "Womens", PT: 0, Notes: ""},
+  {key: 17, name: "Bren Hall DBH", mapNumber: 314, position: {lat: 33.643237272975526, lng: -117.84187707545195}, floor: 1, room: "1414", rrType: "Womens", PT: 2, Notes: ""},
+  {key: 29, name: "Crawford Hall CH", mapNumber: 903, position: {lat: 33.64803706971666, lng: -117.84807145754041}, floor: 1, room: "1222", rrType: "Womens", PT: 2, Notes: ""},
+  {key: 13, name: "Biological Sciences III", mapNumber: 519, position: {lat: 33.6453449091607, lng: -117.84617158338814}, floor: 1, room: "1604", rrType: "Womens", PT: 1, Notes: ""},
+  {key: 14, name: "Biological Sciences III", mapNumber: 519, position: {lat: 33.6453449091607, lng: -117.84617158338814}, floor: 1, room: "1002", rrType: "Womens", PT: 1, Notes: ""},
+  {key: 15, name: "Biological Sciences III", mapNumber: 519, position: {lat: 33.6453449091607, lng: -117.84617158338814}, floor: 1, room: "1206", rrType: "Womens", PT: 2, Notes: ""},
+  {key: 27, name: "Susan And Henry Samueli College of Health Sciences", mapNumber: 856, position: {lat: 33.64072859034359, lng: -117.85299405685636}, floor: 1, room: "1511", rrType: "Womens", PT: 0, Notes: "(Pending) Dispenser on Backorder"},
+  {key: 28, name: "Susan And Henry Samueli College of Health Sciences", mapNumber: 856, position: {lat: 33.64072859034359, lng: -117.85299405685636}, floor: 1, room: "1513", rrType: "Inclusive", PT: 0, Notes: "(Pending) Dispenser on Backorder"},
+  
+
   {key: 8, name: "Art Studio ART", mapNumber: 722, position: {lat: null, lng: null}, floor: 1, room: "169", rrType: "Womens", PT: 2, Notes: ""},
   {key: 9, name: "Arts Instruction & Technology Resourse Center AITR", mapNumber: 714, position: {lat: null, lng: null}, floor: 1, room: "192B", rrType: "Womens", PT: 1, Notes: ""},
   {key: 10, name: "Beckman Laser Institute BLI", mapNumber: 817, position: {lat: null, lng: null}, floor: 1, room: "C104", rrType: "Womens", PT: 1, Notes: ""},
   {key: 11, name: "Berk Hall BH", mapNumber: 802, position: {lat: null, lng: null}, floor: 1, room: "204", rrType: "Womens", PT: 1, Notes: ""},
   {key: 12, name: "Biological Sciences Admin. BSA", mapNumber: 515, position: {lat: null, lng: null}, floor: 1, room: "112", rrType: "Womens", PT: 2, Notes: "Bison Modular"},
-  {key: 13, name: "Biological Sciences III", mapNumber: 519, position: {lat: null, lng: null}, floor: 1, room: "1604", rrType: "Womens", PT: 1, Notes: ""},
-  {key: 14, name: "Biological Sciences III", mapNumber: 519, position: {lat: null, lng: null}, floor: 1, room: "1002", rrType: "Womens", PT: 1, Notes: ""},
-  {key: 15, name: "Biological Sciences III", mapNumber: 519, position: {lat: null, lng: null}, floor: 1, room: "1206", rrType: "Womens", PT: 2, Notes: ""},
   {key: 16, name: "Bonney Research Laboratory BRL", mapNumber: 512, position: {lat: null, lng: null}, floor: 1, room: "100C", rrType: "Womens", PT: 1, Notes: "By RM 100D"},
-  {key: 17, name: "Bren Hall DBH", mapNumber: 314, position: {lat: null, lng: null}, floor: 1, room: "1414", rrType: "Womens", PT: 2, Notes: ""},
   {key: 18, name: "Building Services Bldg. G5", mapNumber: 899, position: {lat: null, lng: null}, floor: 1, room: "103D", rrType: "Womens", PT: 1, Notes: ""},
   {key: 19, name: "Calif.Inst. For Telecom & Info. Tech. Calit 2", mapNumber: 325, position: {lat: null, lng: null}, floor: 1, room: "1201", rrType: "Womens", PT: 1, Notes: ""},
   {key: 20, name: "Calif.Inst. For Telecom & Info. Tech. Calit 2", mapNumber: 325, position: {lat: null, lng: null}, floor: 1, room: "1004", rrType: "Womens", PT: 1, Notes: ""},
@@ -27,9 +30,6 @@ export const product_locations = [
   {key: 24, name: "Claire Trevor Theater CTT", mapNumber: 711, position: {lat: null, lng: null}, floor: "B", room: "B17A", rrType: "Inclusive", PT: 2, Notes: ""},
   {key: 25, name: "Sue And Bill Gross Hall Nursing and Health Science", mapNumber: 854, position: {lat: null, lng: null}, floor: 1, room: "1201", rrType: "Womens", PT: 0, Notes: "(Pending) Dispenser on Backorder"},
   {key: 26, name: "Sue And Bill Gross Hall Nursing and Health Science", mapNumber: 854, position: {lat: null, lng: null}, floor: 1, room: "1203", rrType: "Inclusive", PT: 0, Notes: "(Pending) Dispenser on Backorder"},
-  {key: 27, name: "Susan And Henry Samueli College of Health Sciences", mapNumber: 856, position: {lat: null, lng: null}, floor: 1, room: "1511", rrType: "Womens", PT: 0, Notes: "(Pending) Dispenser on Backorder"},
-  {key: 28, name: "Susan And Henry Samueli College of Health Sciences", mapNumber: 856, position: {lat: null, lng: null}, floor: 1, room: "1513", rrType: "Inclusive", PT: 0, Notes: "(Pending) Dispenser on Backorder"},
-  {key: 29, name: "Crawford Hall CH", mapNumber: 903, position: {lat: null, lng: null}, floor: 1, room: "1222", rrType: "Womens", PT: 2, Notes: ""},
   {key: 30, name: "Croul Hall CRH", mapNumber: 417, position: {lat: null, lng: null}, floor: 1, room: "1303", rrType: "Womens", PT: 1, Notes: ""},
   {key: 31, name: "Disability Services Center", mapNumber: 313, position: {lat: null, lng: null}, floor: 1, room: "116", rrType: "Womens", PT: 2, Notes: ""},
   {key: 32, name: "Drama Building DRA", mapNumber: 715, position: {lat: null, lng: null}, floor: 1, room: "113", rrType: "Womens", PT: 2, Notes: ""},
@@ -137,4 +137,4 @@ export const product_locations = [
   {key: 134, name: "Track & Field House", mapNumber: 907, position: {lat: null, lng: null}, floor: 1, room: "108", rrType: "Womens", PT: 3, Notes: "Athletics"},
 
 
-*/
+]
