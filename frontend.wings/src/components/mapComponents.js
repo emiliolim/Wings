@@ -32,11 +32,27 @@ const uciRestriction = {
   };
   
 export const MapComponent = () => {
+  const [locations, setLocations] = useState(product_locations);
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [defaultMapCenter, setDefaultMapCenter] = useState(aldrich_park);
   const [mapCenter, setMapCenter] = useState(null);
   const [defaultZoom, setDefaultZoom] = useState(initial_zoom);
   const [mapZoom, setMapZoom] = useState(null);
+
+  const updateStockedStatus = useCallback((key, newStatus) => {
+    setLocations(prevLocations => 
+      prevLocations.map(location => 
+        location.key === key ? {...location, Stocked: newStatus} : location
+      )
+    );
+    // Update the selectedLocation as well
+    setSelectedLocation(prevSelected => 
+      prevSelected && prevSelected.key === key 
+        ? {...prevSelected, Stocked: newStatus} 
+        : prevSelected
+    );
+  }, []);
+
 
   const handleMarkerClick = (location) => {
     console.log(`Clicked on ${location.name}`);
@@ -68,7 +84,7 @@ export const MapComponent = () => {
           
           mapId={MAP_ID}
         >
-            {product_locations.map((location, index) => (
+            {locations.map((location, index) => (
               <AdvancedMarker
                 key={index} 
                 position={location.position}
@@ -77,8 +93,8 @@ export const MapComponent = () => {
               >
                 <div title={location.name}>
                   <Pin
-                    background={'#6B095B'} // Change this to your desired color
-                    borderColor={'#8c0d77'} // Optional: change the border color
+                    background={'#6B095B'} 
+                    borderColor={'#8c0d77'}
                     glyphColor={'#FFFFFF'}
                   />
                 </div>
@@ -91,6 +107,7 @@ export const MapComponent = () => {
             <InfoCard
               location={selectedLocation} 
               onClose={handleCloseInfoCard}
+              updateStockedStatus={updateStockedStatus}
             />
           </div>
         )}
@@ -100,7 +117,11 @@ export const MapComponent = () => {
   );
 };
 
-export const InfoCard = ({location, onClose}) => {
+export const InfoCard = ({location, onClose, updateStockedStatus}) => {
+  const handleReportOutOfStock = () => {
+    updateStockedStatus(location.key, !location.Stocked);
+  };
+  
   return (
     <div className="infoCard">
       {/*Location Name and Close Button top right*/}
@@ -132,7 +153,7 @@ export const InfoCard = ({location, onClose}) => {
         <div className="infoCard-details-line">
           <PackageIcon/>
           <h4>
-            In Stock
+            {location.Stocked ? "In Stock" : "Out of Stock"}
           </h4>
         </div>
         {/*Notes*/}
@@ -156,8 +177,10 @@ export const InfoCard = ({location, onClose}) => {
       </div>
       {/*Report Out of Stock*/}
       <div className="infoCard-button-container">
-        <button className="infoCard-report-button"onClick={onClose}>
-          Report Out of Stock
+        <button className="infoCard-report-button"
+        onClick={handleReportOutOfStock}
+        >
+          {location.Stocked ? "Report Out of Stock" : "Report In Stock"}
         </button>
       </div>
     </div>

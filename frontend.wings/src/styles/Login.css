@@ -113,6 +113,7 @@ body {
     color: #6B095B;
 }
 
+
 .username {
         position: relative;
         font-weight: bold;
@@ -165,14 +166,14 @@ body {
 }
           
 .formInput {
-            border: 1px solid #6b095b;
-            position: relative;
-            border-radius: 30px;
-            height: 45px;
-            padding: 20px;
-            font-size: 16px;
-            font-family: 'DM Sans', sans-serif;
-            background-color: #fff;
+    border: 1px solid #6b095b;
+    position: relative;
+    border-radius: 30px;
+    height: 45px;
+    padding: 20px;
+    font-size: 16px;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #fff;
 }
           
 .submitButton {

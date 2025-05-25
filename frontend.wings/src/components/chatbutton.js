@@ -49,7 +49,7 @@ function ChatButton() {
             ))}
           </div>
           <div className="input-area">
-            <input type="text" ref={inputRef} />
+            <input type="text" ref={inputRef} className="input-area-text" />
             <button className="submit" onClick={handleSend}>
               <SendArrow/>
             </button>
