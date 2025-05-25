@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-export const API_URL = 'https://wings-wid5.onrender.com';
-
+const API_URL = process.env.API_URL;
 export const get_users = async () =>
 {
     const response = await axios.get(`${API_URL}/users`);
