@@ -13,7 +13,7 @@ export const Home = () => {
       {/*Left Side*/}
       <section className="left-grid">
         <section className="top-bar">
-          <div className="WingsLogo">
+        <div className="WingsLogo" onClick={() => {navigate("/")}} style={{ cursor: "pointer" }}>
           <WingsIcon />
           <p className="WingsText" onClick={() => navigate("/")}>Wings</p>
           </div>

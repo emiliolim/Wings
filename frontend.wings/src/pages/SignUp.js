@@ -3,7 +3,7 @@ import park from "../images/aldrich-park.jpg";
 import "../styles/SignUp.css";
 import {add_user} from '../Api.js';
 import {useNavigate} from 'react-router-dom'
-
+import {WingsIcon} from '../components/icons'
 const SignUp = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -40,15 +40,15 @@ const SignUp = () => {
 
   return (
     <div className="logInPage">
-      <div className="image8" />
-      <img className="image6Icon" src={park} alt="Aldrich Park" />
-      <div className="gameIconsangelOutfit" />
-      <div className="wings"><span className="wings1">Wings</span></div>
-      <div className="everyAngelNeedsContainer">Every angel needs their wings</div>
-      <div className="lineMdheartTwotoneIcon" />
-      <div className="vectorIcon" />
-      <div className="loginsignUp">Log In</div>
-
+      <section className="top-bar">
+      <div className="WingsLogo" onClick={() => {navigate("/")}} style={{ cursor: "pointer" }}>
+          <WingsIcon />
+          <p className="WingsText">Wings</p>
+          </div>
+          <button className="LoginSignUp">
+            Login/Sign up
+          </button>
+        </section>
       <form onSubmit={handleSubmit} className="formContainer">
         <label className="formLabel">Username</label>
         <input
