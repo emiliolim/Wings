@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef, useCallback} from 'react';
 import {XIcon, MarkerIcon, PackageIcon} from './icons';
-import defaultImage from "../images/aldrich-park.jpg";
+import bathroomImage from "../images/uci_bathroom.jpg";
 
 import {
   APIProvider,
@@ -114,6 +114,7 @@ export const InfoCard = ({location, onClose}) => {
       </div>
       {/*Location Image */}
       <div className="infoCard-image">
+        <img src={bathroomImage} alt="UCI Bathroom" />
       </div>
       <div className="infoCard-line">
       </div>
