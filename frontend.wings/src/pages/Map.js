@@ -32,6 +32,7 @@ export const Map = () => {
         </div>
         <div className="">
             <MapComponent/>
+            <ChatButton></ChatButton>
           </div>
         
       </main>
