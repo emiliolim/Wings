@@ -1,6 +1,10 @@
 # Wings 🕊️  
 **A web app that helps UCI students find bathrooms with free menstrual products.**
 
+## Demo  
+**Feel free to check out the live demo of our frontend here!**
+🚀 **[Live Demo](https://wings-flame.vercel.app/)**  
+
 ## Overview
 Wings is a campus-focused web application built to promote menstrual equity by helping students at the University of California, Irvine locate bathrooms that provide free menstrual products. Using an interactive map interface, users can easily find nearby stocked bathrooms.
 
